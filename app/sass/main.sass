@@ -1,0 +1,384 @@
+@import "reset"
+@import "vars"
+
+body
+	font-family: 'Open Sans', sans-serif
+	font-size: 14px
+	color: #282828
+	background-color: #f6f6f6
+
+%clearfix
+	&:after
+		content: ''
+		display: table
+		clear: both
+.container
+	position: relative
+	max-width: 835px
+	margin: 0 auto
+	@extend %clearfix
+.btn
+	padding: 15px 54px
+	color: $accent2-color
+	font-weight: bold
+	text-transform: uppercase
+	border-radius: 30px
+	background-color: $main-color
+	cursor: pointer
+	transition: all .3s ease
+	@media (max-width:820px)
+		padding: 10px 15px
+	@media (max-width:660px)
+		padding: 10px 54px
+	&:hover
+		background-color: darken($main-color, 10%)
+
+/************** Top-banner mobile **************/
+
+.mobile-show
+	display: none
+	position: relative
+	width: 100%
+	height: 175px
+	@media (max-width:402px)
+		display: table
+	&__pic
+		display: block
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+	&__text
+		position: relative
+		display: table-cell
+		text-align: center
+		vertical-align: middle
+		color: #fff
+		font-family: Tahoma, sans-serif
+		font-size: 3.75em
+		font-weight: bold
+		letter-spacing: 20px
+		text-transform: uppercase
+		z-index: 2
+
+/************** Content-product-list **************/
+
+.product
+	padding-top: 50px
+	&__list
+		text-align: justify
+		text-justify: distribute-all-line
+		@media (max-width:820px)
+			text-align: center
+		&::after
+			content: ''
+			display: inline-block
+			width: 100%
+			height: 0
+	&__item
+		display: inline-block
+		cursor: pointer
+		&:hover
+			.product__hover
+				opacity: 1
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+	&__img
+		position: relative
+		width: 265px
+		height: 265px
+	&__pic
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+	&__title
+		padding: 18px 0 20px
+		font-family: 'Oswald', sans-serif
+		font-size: 0.857em
+		color: #282828
+		text-align: center
+		font-weight: bold
+		text-transform: uppercase
+		text-justify: distribute
+		@media (max-width: 820px)
+			padding: 10px 0
+	&__price
+		position: absolute
+		right: 0
+		bottom: 20px
+		padding: 5px
+		background-color: $main-color
+		@media (max-width: 820px)
+			display: none
+		&--tablet
+			display: none
+			@media (max-width: 820px)
+				display: block
+				padding-bottom: 30px
+	&__hover
+		position: absolute
+		top: 115px
+		left: 65px
+		padding: 10px
+		font-size: 1.286em
+		font-weight: bold
+		white-space: nowrap
+		text-transform: uppercase
+		background-color: $main-color
+		opacity: 0
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+		transition: all .3s ease
+		@media (max-width: 820px)
+			display: none
+	&__hidden
+		display: none
+		@media (max-width: 820px)
+			display: block
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 0
+			padding: 18px 0
+			font-size: 1.250em
+			color: $main-color
+			font-weight: bold
+			text-align: center
+			text-transform: uppercase
+			background:rgb(0,0,0)
+			background-color: rgba(0, 0, 0, .5)
+			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000)"
+.price
+	color: $accent2-color
+	font-size: 1.143em
+	font-weight: bold
+	&--old
+		@extend .price
+		text-decoration: line-through
+		padding-right: 15px
+	&--new
+		@extend .price
+		color: $accent-color
+
+/************** Pop-up **************/
+
+.pop-up
+	display: none
+	&__overlay
+		position: fixed
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background:rgb(0,0,0)
+		background-color: rgba(0, 0, 0, .5)
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000)"
+	&__wrap
+		position: absolute
+		top: 130px
+		right: 0
+		left: 0
+		width: 100%
+		background-color: #fff
+	&__inner
+		position: relative
+		padding: 20px 65px 25px 20px
+		z-index: 999
+		@extend %clearfix
+		@media (max-width:660px)
+			padding: 80px 0 5px 0
+			text-align: center	
+	&__title
+		padding-bottom: 18px
+		font-family: 'Oswald', sans-serif
+		font-size: 1.250em
+		text-transform: uppercase
+		text-align: left
+		color: $accent2-color
+		@media (max-width:660px)
+			padding: 0 35px 18px
+	&__id
+		padding-bottom: 20px
+		font-size: .8em
+		color: #828389
+		@media (max-width:820px)
+			padding-bottom: 5px
+	&__price
+		padding-bottom: 25px
+		font-weight: bold
+		font-size: 1.375em
+		color: $accent2-color
+		@media (max-width:820px)
+			font-size: 2.5em
+		@media (max-width:675px)
+			font-size: 1.375em
+	&__rating
+		@media (max-width:820px)
+			padding-bottom: 25px
+	&__star
+		color: $accent-color
+		cursor: pointer
+		&.active
+			color: #828389
+	&__img
+		float: left
+		padding-right: 30px
+		@media (max-width:660px)
+			float: none
+			display: inline-block
+			padding-right: 0	
+		@media (max-width:400px)
+			width: 100%
+	&__pic
+		max-width: 400px
+		height: 419px
+		@media (max-width:470px)
+			display: inline-block
+			height: auto
+		@media (max-width:400px)
+			width: 100%
+	&__desc
+		padding: 30px 0
+		font-size: .82em
+		line-height: 20px
+		@media (max-width: 820px)
+			clear: both
+			padding: 30px 35px	
+	&__size
+		padding: 10px 0 4px
+		color: $accent2-color
+		font-weight: bold
+		text-transform: uppercase
+	&__soc
+		position: absolute
+		top: 35px
+		left: 35px
+		@media (max-width:820px)
+			top: 70px
+		@media (max-width:470px)
+			top: 120px
+			left: 80px
+		@media (max-width:400px)
+			top: 120px
+			left: 20px
+	&__button
+		padding-top: 20px
+		@media (max-width:660px)
+			clear: both
+	&__close
+		position: absolute
+		top: 10px
+		right: 10px
+		font-size: 1.6em
+		color: #2c87ce
+		width: 40px
+		height: 40px
+		line-height: 40px
+		text-align: center
+		vertical-align: middle
+		border-radius: 50%
+		border: 2px solid #2c87ce
+		cursor: pointer
+		@media (max-width:470px)
+			border: none
+			font-size: 2.6em
+.desc__hidden
+	display: none
+	@media (max-width:820px)
+		display: block
+		padding-bottom: 18px
+		font-size: 2em
+		font-weight: bold
+.size
+	&__name
+		display: inline-block
+		padding-right: 3px
+		@media (max-width: 820px)
+			padding-bottom: 15px
+	&__hidden
+		display: none
+		@media (max-width: 820px)
+			display: inline
+	&__list
+		display: inline-block
+		@media (max-width:820px)
+			display: block
+	&__item
+		display: inline-block
+		margin: 0 7px
+		width: 38px
+		height: 38px
+		color: $accent2-color
+		border-radius: 50%
+		border: 1px solid $accent2-color
+		text-align: center
+		vertical-align: middle
+		line-height: 38px
+		transition: all .3s ease
+		cursor: pointer
+		@media (max-width:820px)
+			margin-left: 0
+			margin-bottom: 10px
+		&:hover, &.active
+			color: #fff
+			background-color: $accent2-color
+.soc
+	&__name
+		position: relative
+		width: 40px
+		color: #2c87ce
+		font-size: 1.6em
+		text-align: center
+		cursor: pointer
+		transform: rotate(0)
+		transition: all .6s ease
+		z-index: 3
+		&.active
+			transform: rotate(45deg)
+	&__item
+		position: absolute
+		top: -15px
+		left: 0
+		margin: 7px 0
+		font-size: 1.6em
+		color: #2c87ce
+		width: 40px
+		height: 40px
+		line-height: 40px
+		text-align: center
+		vertical-align: middle
+		border-radius: 50%
+		border: 2px solid #2c87ce
+		cursor: pointer
+		opacity: 0
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+		transition: all .2s ease
+		z-index: 1
+		&.active
+			opacity: 1
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+			&:first-child
+				top: 25px
+				transition: all .2s ease
+				& + .soc__item
+					top: 75px
+					transition: all .3s ease
+					& + .soc__item
+						top: 125px
+						transition: all .4s ease
+						& + .soc__item
+							top: 175px
+							transition: all .5s ease
+							& + .soc__item
+								top: 225px
+								transition: all .6s ease
+		&:hover
+			color: #fff
+			background-color: #2c87ce

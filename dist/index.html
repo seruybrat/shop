@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="libs/font-awesome-4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="container">
+
+		<!--Top-banner mobile-->
+		
+		<div class="mobile-show">
+			<img src="img/mobile.jpg" alt="" class="mobile-show__pic">
+			<div class="mobile-show__text">
+				Sale
+			</div>
+		</div>
+
+		<!--Content-product-list-->
+
+		<div class="product">
+			<ul class="product__list">
+				<li class="product__item" onclick="popUpOn()">
+					<div class="product__img">
+						<img src="img/item1.jpg" class="product__pic" alt="">
+						<div class="product__price">
+							<span class="price--old">$29.50</span>
+							<span class="price--new">$19.99</span>
+						</div>
+						<div class="product__hover">
+							Show more
+						</div>
+						<div class="product__hidden">
+							Click to show more
+						</div>
+					</div>
+					<div class="product__title">
+						For gamers by gamers tee
+					</div>
+					<div class="product__price--tablet">
+						<span class="price--new">$19.99</span>
+					</div>
+				</li>
+				<li class="product__item">
+					<div class="product__img">
+						<img src="img/item2.jpg" class="product__pic" alt="">
+						<div class="product__price">
+							<span class="price">$22.00</span>
+						</div>
+						<div class="product__hover">
+							Show more
+						</div>
+						<div class="product__hidden">
+							Click to show more
+						</div>
+					</div>
+					<div class="product__title">
+						spectroom scars hoodie
+					</div>
+					<div class="product__price--tablet">
+						<span class="price">$22.00</span>
+					</div>
+				</li>
+				<li class="product__item">
+					<div class="product__img">
+						<img src="img/item3.jpg" class="product__pic" alt="">
+						<div class="product__price">
+							<span class="price">$24.99</span>
+						</div>
+						<div class="product__hover">
+							Show more
+						</div>
+						<div class="product__hidden">
+							Click to show more
+						</div>
+					</div>
+					<div class="product__title">
+						spectroom GAMER TEE
+					</div>
+					<div class="product__price--tablet">
+						<span class="price">$24.99</span>
+					</div>
+				</li>
+				<li class="product__item">
+					<div class="product__img">
+						<img src="img/item4.jpg" class="product__pic" alt="">
+						<div class="product__price">
+							<span class="price--old">$29.50</span>
+						</div>
+						<div class="product__hover">
+							Show more
+						</div>
+						<div class="product__hidden">
+							Click to show more
+						</div>
+					</div>
+					<div class="product__title">
+						GAMING FOR GOOD TEE
+					</div>
+					<div class="product__price--tablet">
+						<span class="price--new">$19.99</span>
+					</div>
+				</li>
+				<li class="product__item">
+					<div class="product__img">
+						<img src="img/item5.jpg" class="product__pic" alt="">
+						<div class="product__price">
+							<span class="price">$60.00</span>
+						</div>
+						<div class="product__hover">
+							Show more
+						</div>
+						<div class="product__hidden">
+							Click to show more
+						</div>
+					</div>
+					<div class="product__title">
+						spectroom web hoodie
+					</div>
+					<div class="product__price--tablet">
+						<span class="price">$60.00</span>
+					</div>
+				</li>
+				<li class="product__item">
+					<div class="product__img">
+						<img src="img/item6.jpg" class="product__pic" alt="">
+						<div class="product__price">
+							<span class="price">$54.00</span>
+						</div>
+						<div class="product__hover">
+							Show more
+						</div>
+						<div class="product__hidden">
+							Click to show more
+						</div>
+					</div>
+					<div class="product__title">
+						spectroom varsity hoodie
+					</div>
+					<div class="product__price--tablet">
+						<span class="price">$54.00</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<!--Pop-up-->
+
+		<div class="pop-up" id="pop-up">
+			<div class="pop-up__overlay"></div>
+			<div class="pop-up__wrap">
+				<div class="pop-up__inner" id="pop-up__inner">
+					<div class="pop-up__img">
+						<img src="img/item1.jpg" alt="" class="pop-up__pic">
+					</div>
+					<div class="pop-up__title">
+						for gamers by gamers tee
+					</div>
+					<div class="pop-up__id">
+						Item #: 701642853695
+					</div>
+					<div class="pop-up__price">
+						<span class="price--old">$29.50</span>
+						<span class="price--new">$19.99</span>
+					</div>
+					<div class="pop-up__rating">
+						<i class="fa fa-star pop-up__star"></i>
+						<i class="fa fa-star pop-up__star"></i>
+						<i class="fa fa-star pop-up__star"></i>
+						<i class="fa fa-star pop-up__star"></i>
+						<i class="fa fa-star pop-up__star active"></i>
+					</div>
+					<div class="pop-up__desc">
+						<span class="desc__hidden">Details</span>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore id cum doloremque fuga sint dignissimos provident aut maxime, ab placeat sed excepturi. Aperiam dolor facere esse mollitia necessitatibus architecto earum.
+					</div>
+					<div class="pop-up__size">
+						<div class="size__name">
+							<span class="size__hidden">select a </span> size:
+						</div>
+						<ul class="size__list">
+							<li class="size__item">xs</li>
+							<li class="size__item">s</li>
+							<li class="size__item">m</li>
+							<li class="size__item active">l</li>
+						</ul>
+					</div>
+					<div class="pop-up__button">
+						<button class="btn">add to cart</button>
+					</div>
+					<div class="pop-up__soc">
+						<div class="soc__name" id="soc-toggle" onclick="changeClass(this, 'active'); changeItemClass()">
+							<i class="fa fa-plus toggle__icon"></i>
+						</div>
+						<ul class="soc__list">
+							<li class="soc__item">
+								<i class="fa fa-facebook soc__icon"></i>
+							</li>
+							<li class="soc__item">
+								<i class="fa fa-twitter soc__icon"></i>
+							</li>
+							<li class="soc__item">
+								<i class="fa fa-pinterest-p soc__icon"></i>
+							</li>
+							<li class="soc__item">
+								<i class="fa fa-youtube soc__icon"></i>
+							</li>
+							<li class="soc__item">
+								<i class="fa fa-instagram soc__icon"></i>
+							</li>
+						</ul>
+					</div>
+					<div class="pop-up__close" onclick="popUpOff()">
+						<i class="fa fa-times"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+<!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
+<script src="js/common.js"></script>
+
+</body>
+</html>
